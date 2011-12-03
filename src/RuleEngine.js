@@ -7,7 +7,10 @@
     
     outer.RuleEngine.prototype.GetNextStateOfCellGivenLiveNeighborCount = function(_state, _neighborCount) {
         
-        return State.ALIVE;
+        if ( _neighborCount != 3 && _neighborCount != 2)
+            return State.DEAD;
+        else
+            return State.ALIVE;
         
     }
     

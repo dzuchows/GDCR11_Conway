@@ -18,5 +18,15 @@ describe("Conways Game of Life", function() {
             expect(nextCellState).toBe(State.DEAD);
         
         });
+        
+        it("makes a live cell with two neighbors alive", function() {
+            var ruleEngine = new RuleEngine();
+            
+            var nextCellState = ruleEngine.GetNextStateOfCellGivenLiveNeighborCount(State.ALIVE,2);
+            expect(nextCellState).toBe(State.ALIVE);
+        
+        });
+        
+
 	
 });
